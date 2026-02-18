@@ -1,0 +1,15 @@
+/**
+ * layout.css - Container, grids, spacing
+ */
+.layout__container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Alias para compatibilidad con páginas existentes */
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 24px;
+}

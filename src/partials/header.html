@@ -1,0 +1,81 @@
+<header class="site-header" id="site-header" role="banner">
+  <div class="layout__container">
+    <a href="index.html" class="nav__logo">
+      <span class="nav__logo-icon" aria-hidden="true"></span>
+      <span class="logo-text">SPD Contracting, Inc.</span>
+    </a>
+
+    <button type="button" class="nav__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-list-wrap" id="nav-toggle">
+      <span class="nav__toggle-icon"></span>
+    </button>
+
+    <div class="nav__list-wrap" id="nav-list-wrap" aria-label="Main navigation">
+      <ul class="nav__list" role="menubar">
+        <!-- Projects: mega menu -->
+        <li class="nav__item" role="none" aria-expanded="false" aria-haspopup="true" aria-controls="nav-dropdown-projects">
+          <a href="projects.html" class="nav__link" role="menuitem" id="nav-trigger-projects" aria-controls="nav-dropdown-projects" aria-expanded="false">
+            Projects <span class="nav__chevron" aria-hidden="true">▼</span>
+          </a>
+          <div class="nav__dropdown nav__mega" id="nav-dropdown-projects" role="menu" aria-label="Projects submenu" hidden>
+            <div class="nav__mega-cols">
+              <button type="button" class="nav__mega-category is-active" data-nav-panel="randall" role="menuitem">Randall Recreation Center Project <span class="nav__mega-arrow">›</span></button>
+              <button type="button" class="nav__mega-category" data-nav-panel="gov-buildings" role="menuitem">Government-Owned Buildings <span class="nav__mega-arrow">›</span></button>
+              <button type="button" class="nav__mega-category" data-nav-panel="municipal" role="menuitem">Municipal & Healthcare <span class="nav__mega-arrow">›</span></button>
+              <button type="button" class="nav__mega-category" data-nav-panel="gov-housing" role="menuitem">Government Housing <span class="nav__mega-arrow">›</span></button>
+              <button type="button" class="nav__mega-category" data-nav-panel="recreational" role="menuitem">Recreational Facilities <span class="nav__mega-arrow">›</span></button>
+            </div>
+            <div class="nav__mega-panel">
+              <div class="nav__mega-panel-content is-visible" id="nav-panel-randall" data-nav-panel-content="randall">
+                <a href="projects.html#randall">Randall Recreation Center Project</a>
+                <a href="projects.html#sherwood">Sherwood Recreation Center Exterior Improvements</a>
+              </div>
+              <div class="nav__mega-panel-content" id="nav-panel-gov-buildings" data-nav-panel-content="gov-buildings">
+                <a href="projects.html#wall-o-street">The Wall at O Street SE</a>
+                <a href="projects.html#blue-building">Blue Building Construction</a>
+              </div>
+              <div class="nav__mega-panel-content" id="nav-panel-municipal" data-nav-panel-content="municipal">
+                <a href="projects.html#mpd">MPD 4th District HQ</a>
+                <a href="projects.html#municipal">Municipal Projects</a>
+              </div>
+              <div class="nav__mega-panel-content" id="nav-panel-gov-housing" data-nav-panel-content="gov-housing">
+                <a href="projects.html#forest-ridge">Forest Ridge and The Vistas Apartments Renovations</a>
+                <a href="projects.html#community">Community Center Modernization Phase Two</a>
+              </div>
+              <div class="nav__mega-panel-content" id="nav-panel-recreational" data-nav-panel-content="recreational">
+                <a href="projects.html#sherwood">Sherwood Recreation Center</a>
+                <a href="projects.html#randall">Randall Recreation Center Project</a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- Approach & Expertise: simple dropdown -->
+        <li class="nav__item" role="none" aria-expanded="false" aria-haspopup="true" aria-controls="nav-dropdown-approach">
+          <a href="index.html#approach" class="nav__link" role="menuitem" id="nav-trigger-approach" aria-controls="nav-dropdown-approach" aria-expanded="false">
+            Approach &amp; Expertise <span class="nav__chevron" aria-hidden="true">▼</span>
+          </a>
+          <div class="nav__dropdown" id="nav-dropdown-approach" role="menu" aria-label="Approach & Expertise" hidden>
+            <div class="nav__dropdown-list">
+              <a href="index.html#approach">Self Perform</a>
+              <a href="index.html#approach">Construction Manager At Risk</a>
+              <a href="index.html#approach">Design Build</a>
+              <a href="index.html#approach">Subcontracting</a>
+              <a href="index.html#approach">Project Management</a>
+              <a href="index.html#approach">Construction Management</a>
+              <a href="index.html#approach">Preconstruction</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav__item" role="none">
+          <a href="index.html#approach" class="nav__link" role="menuitem">Company info</a>
+        </li>
+        <li class="nav__item" role="none">
+          <a href="index.html#contact" class="nav__link" role="menuitem">Contact us</a>
+        </li>
+      </ul>
+    </div>
+
+    <a href="index.html#contact" class="btn btn-primary">Request a Quote</a>
+  </div>
+</header>
