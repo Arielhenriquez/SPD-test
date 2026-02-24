@@ -44,17 +44,21 @@
     var footerHtml = results[1];
     if (headerPlaceholder && headerHtml) headerPlaceholder.outerHTML = headerHtml;
     if (footerPlaceholder && footerHtml) footerPlaceholder.outerHTML = footerHtml;
+    function fixLinksForSubfolder(container, prefix) {
+      if (!container) return;
+      container.querySelectorAll("a[href]").forEach(function (a) {
+        var href = a.getAttribute("href");
+        if (href === "index.html") { a.setAttribute("href", prefix + "index.html"); return; }
+        if (href === "projects.html") { a.setAttribute("href", prefix + "projects.html"); return; }
+        if (href === "contactUs.html") { a.setAttribute("href", prefix + "contactUs.html"); return; }
+        if (href.indexOf("index.html") === 0) { a.setAttribute("href", prefix + "index.html" + (href.indexOf("#") !== -1 ? href.substring(href.indexOf("#")) : "")); }
+      });
+    }
     if (isProjectPage) {
       var header = document.getElementById("site-header");
-      if (header) {
-        header.querySelectorAll('a[href="index.html"]').forEach(function (a) { a.setAttribute("href", "../index.html"); });
-        header.querySelectorAll('a[href="projects.html"]').forEach(function (a) { a.setAttribute("href", "../projects.html"); });
-      }
       var footer = document.getElementById("site-footer");
-      if (footer) {
-        footer.querySelectorAll('a[href="index.html"]').forEach(function (a) { a.setAttribute("href", "../index.html"); });
-        footer.querySelectorAll('a[href="projects.html"]').forEach(function (a) { a.setAttribute("href", "../projects.html"); });
-      }
+      fixLinksForSubfolder(header, "../");
+      fixLinksForSubfolder(footer, "../");
     }
     runNavbar();
     runCarousel();
