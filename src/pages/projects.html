@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- Projects landing: Featured, Gallery y Related Projects se rellenan desde projects-data.js (fuente única projectsData). Sin "Community Center Modernization Phase Two". -->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -10,6 +11,7 @@
   <link rel="stylesheet" href="../assets/css/base.css">
   <link rel="stylesheet" href="../assets/css/layout.css">
   <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/navbar.css">
   <link rel="stylesheet" href="../assets/css/carousel.css">
   <link rel="stylesheet" href="../assets/css/pages.css">
 </head>
@@ -22,52 +24,7 @@
         <h2 class="section-title">Featured Projects</h2>
         <div class="c-carousel" data-carousel data-carousel-loop="true" data-carousel-dots="false" data-carousel-breakpoints='{"0":1,"600":2,"900":3}' aria-label="Featured projects">
           <div class="c-carousel__viewport">
-            <div class="c-carousel__track">
-              <div class="c-carousel__slide">
-                <article class="c-carousel__card">
-                  <div class="c-carousel__card-image">
-                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1v3a5oBzJoxE663tWsWIw_gVpwKXUDkGbSizQMB7vilUMkF7SzOssScNHnSGmITs5ZHbgYzNX4wkKGZiXuieiMpYQZK6tlcveLojm3DLxBsWGo2hf-KyuWbqLLCe6lP2X3ja1pHulCoWfoVBp7nPaF5HuvAbZSp8rRBi0yRDvbIJJh0g3XuLfeUl5hj25ebLLWV0L-yljbd0vy4CwiP-9rmQpPtzDKzicO019pN3pXo9Ur_hm40k2pOtrICxn7cgwV5b7bGQ5PSaF" alt="Forest Ridge Apartments"/>
-                  </div>
-                  <div class="c-carousel__card-body">
-                    <p class="c-carousel__card-category">Government Housing</p>
-                    <h3 class="c-carousel__card-title">Forest Ridge and The Vistas Apartments Renovations</h3>
-                  </div>
-                </article>
-              </div>
-              <div class="c-carousel__slide">
-                <article class="c-carousel__card">
-                  <div class="c-carousel__card-image">
-                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvWOmeQ6Bf3RjXw7ObL4sEI8YMa8w6xV9nSzJksyZoOhCwZw2i-X7_AoISzmQOtD_2Wea9TpmldlcBisj4iZuqu_kc01t1mthTLTDHeYPKVRGagHE9kf0fz3CUVg-5QwInq5ItE3Rz7x9cq6wwHwGVXFUdJgZTtIY_FS1za2SyOV-jifU5wfcxJgRQIZNmUTZkTWx99GP4CLn0T1z_z5pKxOLb5gXtjyugqANg8ubrEi3VsSQKMj0Ovi3zI2ke8aXWagrTRCvQAprO" alt="Recreation Center"/>
-                  </div>
-                  <div class="c-carousel__card-body">
-                    <p class="c-carousel__card-category">Recreational Facilities</p>
-                    <h3 class="c-carousel__card-title">Sherwood Recreation Center Exterior Improvements</h3>
-                  </div>
-                </article>
-              </div>
-              <div class="c-carousel__slide">
-                <article class="c-carousel__card">
-                  <div class="c-carousel__card-image">
-                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxD6bpHRp1-5Z_0rLDrrDMJnm7XdoncyHhlevv5od5R0GvJLyuwIGsRCepMMwbG6YqM97j_87lfRg7kJg0-DxWcnE3lwcz78tWxc_4FEsMo15UvSmsYMIxnaKT0JkvDXZBCo3aVIOgEHB6gexOnikQvzQdKQV1Yd_hO2U9MnXXy0nFhl1StivDu5RGXcNKZTOFoQlK101_hJG8_zyKC52tWNtvMSviLBe6VyjpfwkY2GJPBEUSGObBh6UweqP89ZIWDTO91wzVu0gz" alt="Randall Recreation Center"/>
-                  </div>
-                  <div class="c-carousel__card-body">
-                    <p class="c-carousel__card-category">Recreational Facilities</p>
-                    <h3 class="c-carousel__card-title">Randall Recreation Center Project</h3>
-                  </div>
-                </article>
-              </div>
-              <div class="c-carousel__slide">
-                <article class="c-carousel__card">
-                  <div class="c-carousel__card-image">
-                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuACAkUo9Wgyl_p_SOjZ6MFvAgKrFfuvxaUh0FlhkmgOcUtxMmz3wH8FhbawpjZ1ETKbDljAKxNA5xhtEBCC27H2OLPqeVsRwR8IvTmojPodqWDzrvHfiCSG05n1ZtIPg2Xst6m3cLLoXApPpbUzN2vNzRbku1w-wtcZvE9SmiIgeyoSiOBN6RcmfSbdsFFaj-msC67wKHaDQz2wyBAhZNmm44zSjW1QvoiCHKGGlGwGLnq5MOWEY8tJGYeG_vcMy5rH_xV5g4fjy9cn" alt="MPD 4th District HQ"/>
-                  </div>
-                  <div class="c-carousel__card-body">
-                    <p class="c-carousel__card-category">Government Housing</p>
-                    <h3 class="c-carousel__card-title">Community Center Modernization Phase Two</h3>
-                  </div>
-                </article>
-              </div>
-            </div>
+            <div class="c-carousel__track"><!-- filled by projects-data.js --></div>
           </div>
           <button class="c-carousel__btn c-carousel__btn--prev" type="button" aria-label="Previous"></button>
           <button class="c-carousel__btn c-carousel__btn--next" type="button" aria-label="Next"></button>
@@ -87,7 +44,7 @@
             <span>Construction Management</span>
           </div>
           <div class="projects-service-item">
-            <div class="thumb"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4vjK3wugxzeTBMl15-L6SntNzgxJL3Bs5xHYYCU8q7kAlYcdIR6yUyR0KphJ1qQPyGoCXszoz6si8NT6UDrbDr6Lz9AgUUQ1JMboL1FZTERYkBHfoKKBa2OYQ5-tVy8Mxy5uh_i4K048YRVAgo_UqOuLsOBbKSuVW1ArGTk4zXExyBwvcCov3oQtZyCcQiJyBb4Pi1cLrF918U6hlWUBJllDn7EJGXRfsbFqgKwel25nk-w_W_j8B0p7dkGEqYzZRPuZUKnqUPOzh" alt="Project Management"/></div>
+            <div class="thumb"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxD6bpHRp1-5Z_0rLDrrDMJnm7XdoncyHhlevv5od5R0GvJLyuwIGsRCepMMwbG6YqM97j_87lfRg7kJg0-DxWcnE3lwcz78tWxc_4FEsMo15UvSmsYMIxnaKT0JkvDXZBCo3aVIOgEHB6gexOnikQvzQdKQV1Yd_hO2U9MnXXy0nFhl1StivDu5RGXcNKZTOFoQlK101_hJG8_zyKC52tWNtvMSviLBe6VyjpfwkY2GJPBEUSGObBh6UweqP89ZIWDTO91wzVu0gz" alt="Project Management"/></div>
             <span>Project Management</span>
           </div>
           <div class="projects-service-item">
@@ -126,23 +83,7 @@
         <h2 class="section-title">Gallery</h2>
         <div class="c-carousel" data-carousel data-carousel-loop="true" data-carousel-dots="false" data-carousel-breakpoints='{"0":1,"600":2,"900":3}' aria-label="Gallery">
           <div class="c-carousel__viewport">
-            <div class="c-carousel__track">
-              <div class="c-carousel__slide">
-                <div class="gallery-slide-img">
-                  <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiyGks4jyMLMwQ4wLCg4gl3XV06YIhes4x0BUYEXthHNtgMw2fBqZJgT0-BqEVFxAIDx6HYz4FuVTZIyDjPjMxauMVhEM6H1_NWMKxIxUYCINMhuDCagKB4yNnAlfnKEeR1knKXAQOBMfav_RIcLG0J3FD8UAH1nVL9kl0YMJ_04qZ7lnLfqTODSXJ7x3DHr5iAWP0aOIwETxQRqiPsET9jO6LdOUI1nEz8CbN8T2NRL_oDDPYaVCz6g1UBamiHYg3oxjUiphgbPy3" alt="Construction worker on lift"/>
-                </div>
-              </div>
-              <div class="c-carousel__slide">
-                <div class="gallery-slide-img">
-                  <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxD6bpHRp1-5Z_0rLDrrDMJnm7XdoncyHhlevv5od5R0GvJLyuwIGsRCepMMwbG6YqM97j_87lfRg7kJg0-DxWcnE3lwcz78tWxc_4FEsMo15UvSmsYMIxnaKT0JkvDXZBCo3aVIOgEHB6gexOnikQvzQdKQV1Yd_hO2U9MnXXy0nFhl1StivDu5RGXcNKZTOFoQlK101_hJG8_zyKC52tWNtvMSviLBe6VyjpfwkY2GJPBEUSGObBh6UweqP89ZIWDTO91wzVu0gz" alt="Building structure"/>
-                </div>
-              </div>
-              <div class="c-carousel__slide">
-                <div class="gallery-slide-img">
-                  <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvWOmeQ6Bf3RjXw7ObL4sEI8YMa8w6xV9nSzJksyZoOhCwZw2i-X7_AoISzmQOtD_2Wea9TpmldlcBisj4iZuqu_kc01t1mthTLTDHeYPKVRGagHE9kf0fz3CUVg-5QwInq5ItE3Rz7x9cq6wwHwGVXFUdJgZTtIY_FS1za2SyOV-jifU5wfcxJgRQIZNmUTZkTWx99GP4CLn0T1z_z5pKxOLb5gXtjyugqANg8ubrEi3VsSQKMj0Ovi3zI2ke8aXWagrTRCvQAprO" alt="Commercial construction site"/>
-                </div>
-              </div>
-            </div>
+            <div class="c-carousel__track"><!-- filled by projects-data.js --></div>
           </div>
           <button class="c-carousel__btn c-carousel__btn--prev" type="button" aria-label="Previous"></button>
           <button class="c-carousel__btn c-carousel__btn--next" type="button" aria-label="Next"></button>
@@ -154,32 +95,7 @@
         <h2 class="section-title">Related Projects</h2>
         <div class="c-carousel" data-carousel data-carousel-loop="true" data-carousel-dots="false" data-carousel-breakpoints='{"0":1,"768":2}' aria-label="Related projects">
           <div class="c-carousel__viewport">
-            <div class="c-carousel__track">
-              <div class="c-carousel__slide">
-                <article class="related-card">
-                  <div class="thumb">
-                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuACAkUo9Wgyl_p_SOjZ6MFvAgKrFfuvxaUh0FlhkmgOcUtxMmz3wH8FhbawpjZ1ETKbDljAKxNA5xhtEBCC27H2OLPqeVsRwR8IvTmojPodqWDzrvHfiCSG05n1ZtIPg2Xst6m3cLLoXApPpbUzN2vNzRbku1w-wtcZvE9SmiIgeyoSiOBN6RcmfSbdsFFaj-msC67wKHaDQz2wyBAhZNmm44zSjW1QvoiCHKGGlGwGLnq5MOWEY8tJGYeG_vcMy5rH_xV5g4fjy9cn" alt="MPD 4th District HQ"/>
-                  </div>
-                  <div class="body">
-                    <h3>MPD 4th District HQ</h3>
-                    <p>SPD Contracting, Inc., as the Design-Builder, is overseeing the design and construction of the MPD 4th District Headquarters Generator Replacement Project...</p>
-                    <a href="#" class="link">Read more →</a>
-                  </div>
-                </article>
-              </div>
-              <div class="c-carousel__slide">
-                <article class="related-card">
-                  <div class="thumb">
-                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1v3a5oBzJoxE663tWsWIw_gVpwKXUDkGbSizQMB7vilUMkF7SzOssScNHnSGmITs5ZHbgYzNX4wkKGZiXuieiMpYQZK6tlcveLojm3DLxBsWGo2hf-KyuWbqLLCe6lP2X3ja1pHulCoWfoVBp7nPaF5HuvAbZSp8rRBi0yRDvbIJJh0g3XuLfeUl5hj25ebLLWV0L-yljbd0vy4CwiP-9rmQpPtzDKzicO019pN3pXo9Ur_hm40k2pOtrICxn7cgwV5b7bGQ5PSaF" alt="Forest Ridge Apartments"/>
-                  </div>
-                  <div class="body">
-                    <h3>Forest Ridge Apartments</h3>
-                    <p>This project, now known as Skyline Apartments, was a comprehensive rehabilitation initiative to preserve and enhance 398 affordable housing units located in...</p>
-                    <a href="#" class="link">Read more →</a>
-                  </div>
-                </article>
-              </div>
-            </div>
+            <div class="c-carousel__track"><!-- filled by projects-data.js --></div>
           </div>
           <button class="c-carousel__btn c-carousel__btn--prev" type="button" aria-label="Previous"></button>
           <button class="c-carousel__btn c-carousel__btn--next" type="button" aria-label="Next"></button>
@@ -191,8 +107,10 @@
 
   <div id="site-footer-placeholder"></div>
 
+  <script src="../assets/js/projects-data.js"></script>
+  <script>window.renderProjectsPage && window.renderProjectsPage();</script>
   <script src="../assets/js/carousel.js"></script>
-  <script src="../assets/js/nav.js"></script>
+  <script src="../assets/js/navbar.js"></script>
   <script src="../assets/js/main.js" data-partials-base="../partials/"></script>
 </body>
 </html>

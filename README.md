@@ -31,24 +31,24 @@ src/
   pages/           # Páginas HTML (entry points)
     index.html
     projects.html
+    project/       # Páginas de proyecto individual (slug.html)
   partials/        # Header y footer reutilizables (inyectados por JS)
     header.html
     footer.html
   assets/
     css/
-      base.css       # Variables, reset, tipografía
-      layout.css     # Container, grids
-      components.css # Navbar, footer, botones, dropdowns
-      carousel.css   # Componente carrusel
-      pages.css      # Hero, approach, featured-projects, services, cta, projects
+      base.css, layout.css, components.css, navbar.css
+      carousel.css, pages.css, project.css
     js/
-      main.js        # Carga header/footer y llama Nav.init + Carousel.init
-      nav.js         # Mega menu, dropdown, hamburguesa, teclado, Esc
+      main.js        # Carga header/footer, Navbar.init, Carousel.init
+      navbar.js      # Mega menu, dropdown, hamburguesa, teclado, Esc
       carousel.js    # Componente carrusel reutilizable
+      projects-data.js
+      project-page.js
     img/             # (opcional) Imágenes locales
 ```
 
-Los archivos sueltos en la raíz (`index.html`, `styles.css`, `script.js`, `carousel/`, `projects/`) son la versión anterior; el proyecto activo está en **`src/`**.
+El proyecto activo está en **`src/`**. Sirve desde `src/pages` (p. ej. Live Server sobre `src/pages` o `src`).
 
 ---
 
@@ -61,11 +61,11 @@ Los archivos sueltos en la raíz (`index.html`, `styles.css`, `script.js`, `caro
    - Tu contenido en `<main id="main-content">...</main>`
    - `<div id="site-footer-placeholder"></div>`
 4. Antes de `</body>` carga los scripts en este orden:
-   - `../assets/js/carousel.js`
-   - `../assets/js/nav.js`
+   - `../assets/js/carousel.js` (si usas carrusel)
+   - `../assets/js/navbar.js`
    - `../assets/js/main.js` con `data-partials-base="../partials/"`
 
-`main.js` hará fetch de `../partials/header.html` y `../partials/footer.html`, los inyectará en los placeholders y luego ejecutará `Nav.init()` y `Carousel.init()`.
+`main.js` hará fetch de `header.html` y `footer.html`, los inyectará en los placeholders y luego ejecutará `Navbar.init()` y `Carousel.init()`.
 
 ---
 
@@ -73,11 +73,11 @@ Los archivos sueltos en la raíz (`index.html`, `styles.css`, `script.js`, `caro
 
 - **HTML del menú:** `src/partials/header.html`
 - **Estilos:** `src/assets/css/components.css` (clases `.nav__`, `.nav__dropdown`, `.nav__mega`, etc.)
-- **Comportamiento:** `src/assets/js/nav.js` (hover, click, móvil, cierre con click fuera y Esc)
+- **Comportamiento:** `src/assets/js/navbar.js` (hover, click, móvil, cierre con click fuera y Esc)
 
 En `header.html` encontrarás:
 
-- **Projects (mega menu):** Columna izquierda con categorías (`.nav__mega-category` con `data-nav-panel="id"`). Panel derecho con bloques `.nav__mega-panel-content` y `data-nav-panel-content="id"`. Para añadir una categoría: nuevo `<button class="nav__mega-category" data-nav-panel="nuevo-id">` y un `<div class="nav__mega-panel-content" id="nav-panel-nuevo-id" data-nav-panel-content="nuevo-id">` con los enlaces.
+- **Projects (mega menu):** Columna izquierda con categorías (`.nav__mega-category` con `data-nav-panel="id"`). El panel derecho se rellena por JS desde `navbar.js` (objeto `projectsMenu`). Para añadir una categoría: nuevo `<button class="nav__mega-category" data-nav-panel="nuevo-id">` en `header.html` y la entrada correspondiente en `projectsMenu` en `navbar.js`.
 - **Approach & Expertise (dropdown simple):** Lista de enlaces dentro de `#nav-dropdown-approach` en `.nav__dropdown-list`.
 
 Los enlaces (href) puedes cambiarlos en el propio HTML del partial.

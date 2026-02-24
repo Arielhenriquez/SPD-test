@@ -1,0 +1,205 @@
+/**
+ * project.css - Páginas de proyecto individual: hero, overview (2 cards), gallery, related
+ * Look & feel: cards modernas, spacing limpio, Inter, bordes redondeados, sombras suaves.
+ */
+.page-project {
+  padding-top: var(--header-height);
+}
+
+/* ========== Hero ========== */
+.project-hero {
+  position: relative;
+  min-height: 42vh;
+  max-height: 480px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 0;
+}
+
+.project-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(13, 27, 42, 0.92) 0%, rgba(13, 27, 42, 0.5) 50%, rgba(13, 27, 42, 0.2) 100%);
+}
+
+.project-hero__content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 48px 24px 40px;
+}
+
+.project-hero__category {
+  display: inline-block;
+  margin: 0 0 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.project-hero__title {
+  margin: 0;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-white);
+  letter-spacing: -0.02em;
+}
+
+/* ========== Main content container ========== */
+.project-main .container,
+.project-main .layout__container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ========== Project Overview (2 cards) ========== */
+.project-overview {
+  padding: 56px 0 48px;
+}
+
+.project-overview__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .project-overview__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.project-overview__card {
+  background: var(--color-white);
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  padding: 28px 24px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.project-overview__card h3 {
+  margin: 0 0 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-dark);
+}
+
+.project-overview__card p {
+  margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: var(--color-gray);
+}
+
+/* ========== Gallery section ========== */
+.project-gallery {
+  padding: 32px 0 56px;
+}
+
+.project-gallery .section-title,
+.project-related .section-title {
+  margin: 0 0 24px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-dark);
+}
+
+.project-gallery .gallery-slide-img {
+  aspect-ratio: 3/4;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.project-gallery .gallery-slide-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ========== Related Projects ========== */
+.project-related {
+  padding: 24px 0 64px;
+}
+
+.project-related .related-card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.project-related .related-card .thumb {
+  aspect-ratio: 16/10;
+  background: #e2e8f0;
+  overflow: hidden;
+}
+
+.project-related .related-card .thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-related .related-card .body {
+  padding: 1.25rem;
+}
+
+.project-related .related-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.project-related .related-card h3 a {
+  color: var(--color-dark);
+}
+
+.project-related .related-card h3 a:hover {
+  color: var(--color-accent);
+}
+
+.project-related .related-card p {
+  margin: 0 0 0.75rem;
+  font-size: 0.875rem;
+  color: var(--color-gray);
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.project-related .related-card a.link {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+.project-related .related-card a.link:hover {
+  text-decoration: underline;
+}
+
+/* Carousel buttons on project page */
+.page-project .c-carousel__btn {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  color: #64748b;
+  box-shadow: none;
+}
+
+.page-project .c-carousel__btn:hover {
+  background: var(--color-dark);
+  color: #fff;
+  border-color: var(--color-dark);
+}
