@@ -355,6 +355,71 @@
   margin-right: auto;
 }
 
+/* ========== Company Info hero ========== */
+.company-info-hero {
+  position: relative;
+  min-height: 38vh;
+  max-height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-navy) url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920') center/cover no-repeat;
+  margin: 0 -24px 3rem;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.company-info-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(13, 27, 42, 0.82);
+}
+
+.company-info-hero__content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 2rem;
+}
+
+.company-info-hero__title {
+  margin: 0;
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  font-weight: 700;
+  color: var(--color-white);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.company-info-hero__title-script {
+  display: block;
+  font-size: 0.6em;
+  font-weight: 500;
+  font-style: italic;
+  letter-spacing: 0.02em;
+  margin-top: 0.1em;
+}
+
+@media (min-width: 768px) {
+  .company-info-hero {
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    border-radius: 0;
+  }
+}
+
+.page-company-info .approach-headline .approach-text,
+.page-company-info .approach-headline p {
+  margin: 0 0 1rem;
+  font-size: 1rem;
+  color: var(--color-gray);
+  line-height: 1.7;
+}
+
+.page-company-info .approach-headline p:last-child {
+  margin-bottom: 0;
+}
+
 /* ========== Projects page ========== */
 .page-projects {
   padding-top: var(--header-height);

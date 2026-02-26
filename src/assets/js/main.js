@@ -51,6 +51,7 @@
         if (href === "index.html") { a.setAttribute("href", prefix + "index.html"); return; }
         if (href === "projects.html") { a.setAttribute("href", prefix + "projects.html"); return; }
         if (href === "contactUs.html") { a.setAttribute("href", prefix + "contactUs.html"); return; }
+        if (href === "companyInfo.html") { a.setAttribute("href", prefix + "companyInfo.html"); return; }
         if (href.indexOf("index.html") === 0) { a.setAttribute("href", prefix + "index.html" + (href.indexOf("#") !== -1 ? href.substring(href.indexOf("#")) : "")); }
       });
     }
