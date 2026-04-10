@@ -24,21 +24,21 @@
         <h1 class="hero-title">SPD Contracting</h1>
         <p class="hero-subtitle">Committed to your project</p>
         <div class="hero-buttons">
-          <a href="#approach" class="btn btn-primary">ABOUT US &gt;</a>
-          <a href="#contact" class="btn btn-primary">CONTACT US &gt;</a>
+          <a href="companyInfo.html" class="btn btn-primary">ABOUT US &gt;</a>
+          <a href="contactUs.html" class="btn btn-primary">CONTACT US &gt;</a>
         </div>
       </div>
     </section>
 
     <section class="approach" id="approach">
       <div class="container">
-        <h2 class="section-label">Approach & Expertise</h2>
+        <h2 class="section-label">Company Info</h2>
         <div class="approach-grid">
           <div class="approach-headline">
             <h3>At SPD Contracting, integrity and innovation drive our approach.</h3>
           </div>
           <div class="approach-text">
-            <p>At SPD Contracting, Inc., our comprehensive and integrated approach focuses on project delivery from conception through completion. Leveraging decades of industry experience, we offer specialized expertise and tailored solutions to meet diverse client needs across the D.C. region.</p>
+            <p>SPD Contracting, Inc. was founded in Washington D.C. in 2018 by Rodolfo Gonzalez, obtaining its District Certified Business Enterprise (CBE) certification in 2020. Eager to work directly for the Department of General Services (DGS), SPD Contracting, Inc.</p>
           </div>
         </div>
         <div class="metrics">
@@ -76,32 +76,15 @@
           </div>
           <a href="projects.html" class="btn btn-dark">VIEW ALL PROJECTS &gt;</a>
         </div>
-        <div class="projects-carousel">
-          <button type="button" class="carousel-arrow carousel-prev" aria-label="Previous">‹</button>
-          <div class="projects-cards">
-            <article class="project-card">
-              <div class="project-image"></div>
-              <div class="project-caption">
-                <span class="project-category">Government Housing</span>
-                <h4>Forest Ridge and The Vistas Apartments Renovations</h4>
-              </div>
-            </article>
-            <article class="project-card">
-              <div class="project-image"></div>
-              <div class="project-caption">
-                <span class="project-category">Recreational Facilities</span>
-                <h4>Sherwood Recreation Center Exterior Improvements</h4>
-              </div>
-            </article>
-            <article class="project-card">
-              <div class="project-image"></div>
-              <div class="project-caption">
-                <span class="project-category">Recreational Facilities</span>
-                <h4>Randall Recreation Center Project</h4>
-              </div>
-            </article>
+        <div class="featured-carousel content-section" aria-label="Featured projects">
+          <div class="c-carousel" data-carousel data-carousel-loop="true" data-carousel-dots="false" data-carousel-breakpoints='{"0":1,"600":2,"900":3}' aria-label="Featured projects">
+            <div class="c-carousel__viewport">
+              <div class="c-carousel__track"></div>
+            </div>
+            <button class="c-carousel__btn c-carousel__btn--prev" type="button" aria-label="Previous"></button>
+            <button class="c-carousel__btn c-carousel__btn--next" type="button" aria-label="Next"></button>
+            <div class="c-carousel__dots" aria-label="Pagination"></div>
           </div>
-          <button type="button" class="carousel-arrow carousel-next" aria-label="Next">›</button>
         </div>
       </div>
     </section>
@@ -112,7 +95,7 @@
           <div class="services-intro">
             <h2 class="section-label">Approach & Expertise</h2>
             <p>At SPD Contracting, Inc., our comprehensive and integrated approach focuses on project delivery from conception through completion. Leveraging decades of industry experience, we offer specialized expertise and tailored solutions to meet diverse client needs across the D.C. region.</p>
-            <a href="#approach" class="btn btn-primary">VIEW ALL SERVICES &gt;</a>
+            <a href="approach.html" class="btn btn-primary">VIEW ALL SERVICES &gt;</a>
           </div>
           <div class="service-feature">
             <div class="service-image"></div>
@@ -135,18 +118,9 @@
   <div id="site-footer-placeholder"></div>
 
   <script src="../assets/js/carousel.js"></script>
+  <script src="../assets/js/projects-data.js"></script>
+  <script>window.renderHomePage && window.renderHomePage();</script>
   <script src="../assets/js/navbar.js"></script>
   <script src="../assets/js/main.js" data-partials-base="../partials/"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      var prev = document.querySelector('.carousel-prev');
-      var next = document.querySelector('.carousel-next');
-      var cards = document.querySelector('.projects-cards');
-      if (prev && next && cards) {
-        prev.addEventListener('click', function () { cards.scrollBy({ left: -320, behavior: 'smooth' }); });
-        next.addEventListener('click', function () { cards.scrollBy({ left: 320, behavior: 'smooth' }); });
-      }
-    });
-  </script>
 </body>
 </html>

@@ -19,7 +19,7 @@
   <div id="site-header-placeholder"></div>
   
   <main id="main-content">
-    <section class="contact-hero">
+    <section class="contact-hero" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBOTH_XXiqo2Xmlvew0BGoutUjD_5zUP3JJIePy7kRKcWy_AIOwGaExeC1JdBU4ue6xw0R0TdIxV43s_fpgYikUGTBIY9QoJzaQUUL4jCPT5faFmnUPcxf_ddYcVZJp3RaTmIKF105ih4PMHQYq-H_zrdiZM4gmK91b_hBPJG688OPzmYKnFbQTZPWDseM1x8vFcNgBa00kqDrVWmorEPeZgBCP7ZvZmZosxI8XJe2sZt0G5vpqPq-e4zFe1xC56klPAajYkCDkkcVr'); background-size: cover; background-position: center;">
       <div class="hero-overlay"></div>
 
       <div class="contact-hero-content">
@@ -30,18 +30,6 @@
       </div>
     </section>
     <div class="container contact-page-content">
-
-      <section class="featured-carousel content-section" aria-label="Featured projects">
-        <h2 class="section-title">Featured Projects</h2>
-        <div class="c-carousel" data-carousel data-carousel-loop="true" data-carousel-dots="false" data-carousel-breakpoints='{"0":1,"600":2,"900":3}' aria-label="Featured projects">
-          <div class="c-carousel__viewport">
-            <div class="c-carousel__track"><!-- filled by projects-data.js --></div>
-          </div>
-          <button class="c-carousel__btn c-carousel__btn--prev" type="button" aria-label="Previous"></button>
-          <button class="c-carousel__btn c-carousel__btn--next" type="button" aria-label="Next"></button>
-          <div class="c-carousel__dots" aria-label="Pagination"></div>
-        </div>
-      </section>
       <section class="contact-form-section">
       <div class="contact-form-shell">
       <div class="contact-form-inner">
@@ -49,29 +37,29 @@
       <h2 class="contact-form-title">Contact Us</h2>
       <p class="contact-form-description">Get in touch with our team of experts for your next construction project.</p>
       </div>
-      <form class="contact-form">
+      <form class="contact-form" action="#" method="post">
       <div class="contact-grid contact-grid-two-col">
       <div class="form-field form-field-floating">
-      <input class="input-line" id="first_name" placeholder="First Name" type="text"/>
+      <input class="input-line" id="first_name" name="first_name" placeholder="First Name" type="text" required/>
       <label for="first_name">First Name</label>
       </div>
       <div class="form-field form-field-floating">
-      <input class="input-line" id="last_name" placeholder="Last Name" type="text"/>
+      <input class="input-line" id="last_name" name="last_name" placeholder="Last Name" type="text" required/>
       <label for="last_name">Last Name</label>
       </div>
       </div>
       <div class="contact-grid contact-grid-two-col">
       <div class="form-field form-field-floating">
-      <input class="input-line" id="email" placeholder="E-mail Address" type="email"/>
+      <input class="input-line" id="email" name="email" placeholder="E-mail Address" type="email" required/>
       <label for="email">E-mail Address</label>
       </div>
       <div class="form-field form-field-floating">
-      <input class="input-line" id="phone" placeholder="Phone" type="tel"/>
+      <input class="input-line" id="phone" name="phone" placeholder="Phone" type="tel"/>
       <label for="phone">Phone</label>
       </div>
       </div>
       <div class="form-field">
-      <textarea class="input-box" id="message" placeholder="Your message..." rows="4"></textarea>
+      <textarea class="input-box" id="message" name="message" placeholder="Your message..." rows="4"></textarea>
       </div>
       <button class="contact-submit-btn" type="submit">
                           SEND <span class="material-symbols-outlined">arrow_forward</span>
@@ -100,55 +88,24 @@
       </div>
       </div>
       </section>
-      <section class="related-projects">
-      <div class="related-projects-header">
-      <h2 class="related-projects-title">Related Projects</h2>
-      <div class="related-projects-nav">
-      <button class="related-nav-btn" type="button" aria-label="Previous related project">
-      <span class="material-symbols-outlined">west</span>
-      </button>
-      <button class="related-nav-btn" type="button" aria-label="Next related project">
-      <span class="material-symbols-outlined">east</span>
-      </button>
-      </div>
-      </div>
-      <div class="related-projects-grid">
-      <article class="related-project-card">
-      <div class="related-project-media">
-      <img alt="The Wall at O Street SE" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhVOtn7H0edkswx54-FuoLO3jgri6O-hSRjb3nFS6W2qZcco_AOeuuAskf-K8OVLoB_U3-W4UC2sSrLU9ajo-eOl2eqxLem1HLazcZNgpNWvRDQlljN73qnLkPDfSGWnBOZWM5s6nkVa48Pemyj9XVMma9ymkcMO04-Rh7Kl0X2mLlo_OEAQvT2IOcUQGGasJ1316Z1lfDAeQVuJZovl1vxLmr_TmpTFfLIGRs7ScXK9xtvFmGc20mYAX3X7kqdfIt8u_fIt0RLr5K"/>
-      <div class="related-project-overlay"></div>
-      </div>
-      <h3 class="related-project-name">The Wall at O Street SE</h3>
-      <p class="related-project-summary">
-                      The Design-Build Services for the O Street SE Retaining Wall Restoration project involve the structural rehabilitation and stabilization of the existing retaining wall to ensure long-term integrity and compliance...
-                  </p>
-      <a class="related-project-link" href="#">
-              Read more <span class="material-symbols-outlined">arrow_forward</span>
-      </a>
-      </article>
-      <article class="related-project-card">
-      <div class="related-project-media">
-      <img alt="MPD 4th District HQ" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2Sv_x5WCsnx03lhntAt8mjI6cO4_6Tna9_Lx56q34e95st2GpjzBBLCLXSAQIdnIa-V5QO0q5XvFkfBAkCf4Wj6gvxfpUS1ihWKjbZj4cKBCR5E_NhT-GlzL8dH6cNmb6grEi8QKzqxJ4kThWoYlvFToxrOUde1-P-RMixidpce703e7T7MrLKJUPQPw1EDygRL7LFoHBxIN1mfoEFivgA6E-4NHsMvQpvrucjvSKg89YXrWgkXDgeQAjuNTM99wXfpfug9F8tFY3"/>
-      <div class="related-project-overlay"></div>
-      </div>
-      <h3 class="related-project-name">MPD 4th District HQ</h3>
-      <p class="related-project-summary">
-                      SPD Contracting, Inc., as the Design-Builder, is overseeing the design and construction of the MPD 4th District Headquarters Generator Replacement Project...
-                  </p>
-      <a class="related-project-link" href="#">
-              Read more <span class="material-symbols-outlined">arrow_forward</span>
-      </a>
-      </article>
-      </div>
+      <section class="featured-carousel content-section" aria-label="Related projects">
+        <h2 class="section-title">Related Projects</h2>
+        <div class="c-carousel" data-carousel data-carousel-loop="true" data-carousel-dots="false" data-carousel-breakpoints='{"0":1,"600":2,"900":3}' aria-label="Related projects">
+          <div class="c-carousel__viewport">
+            <div class="c-carousel__track"></div>
+          </div>
+          <button class="c-carousel__btn c-carousel__btn--prev" type="button" aria-label="Previous"></button>
+          <button class="c-carousel__btn c-carousel__btn--next" type="button" aria-label="Next"></button>
+          <div class="c-carousel__dots" aria-label="Pagination"></div>
+        </div>
       </section>
       </div>
   </main>
 
   <div id="site-footer-placeholder"></div>
+  <script src="../assets/js/projects-data.js"></script>
+  <script>window.renderContactPage && window.renderContactPage();</script>
   <script src="../assets/js/carousel.js"></script>
   <script src="../assets/js/navbar.js"></script>
   <script src="../assets/js/main.js" data-partials-base="../partials/"></script>
-
-  <script src="../assets/js/projects-data.js"></script>
-  <script>window.renderProjectsPage && window.renderProjectsPage();</script>
 </body></html>

@@ -10,6 +10,25 @@
 
     <div class="nav__list-wrap" id="nav-list-wrap" aria-label="Main navigation">
       <ul class="nav__list" role="menubar">
+        <li class="nav__item" role="none">
+          <a href="companyInfo.html" class="nav__link" role="menuitem">Company Info</a>
+        </li>
+        <li class="nav__item" role="none" aria-expanded="false" aria-haspopup="true" aria-controls="nav-dropdown-approach">
+          <a href="approach.html" class="nav__link" role="menuitem" id="nav-trigger-approach" aria-controls="nav-dropdown-approach" aria-expanded="false">
+            Approach &amp; Expertise <span class="nav__chevron" aria-hidden="true">▼</span>
+          </a>
+          <div class="nav__dropdown" id="nav-dropdown-approach" role="menu" aria-label="Approach & Expertise" hidden>
+            <div class="nav__dropdown-list">
+              <a href="expertise/preconstruction.html">Preconstruction</a>
+              <a href="expertise/construction-management.html">Construction Management</a>
+              <a href="expertise/project-management.html">Project Management</a>
+              <a href="expertise/subcontracting.html">Subcontracting</a>
+              <a href="expertise/design-build.html">Design-Build</a>
+              <a href="expertise/construction-manager-at-risk.html">Construction Manager at Risk</a>
+              <a href="expertise/self-perform.html">Self-Perform</a>
+            </div>
+          </div>
+        </li>
         <!-- Projects: mega menu (panel derecho lo rellena navbar.js desde projectsMenu) -->
         <li class="nav__item" role="none" aria-expanded="false" aria-haspopup="true" aria-controls="nav-dropdown-projects">
           <a href="projects.html" class="nav__link" role="menuitem" id="nav-trigger-projects" aria-controls="nav-dropdown-projects" aria-expanded="false">
@@ -17,7 +36,7 @@
           </a>
           <div class="nav__dropdown nav__mega" id="nav-dropdown-projects" role="menu" aria-label="Projects submenu" hidden>
             <div class="nav__mega-cols">
-              <button type="button" class="nav__mega-category is-active" data-nav-panel="education" role="menuitem">Randall Recreation Center Project <span class="nav__mega-arrow" aria-hidden="true">›</span></button>
+              <button type="button" class="nav__mega-category is-active" data-nav-panel="education" role="menuitem">Educational Facilities <span class="nav__mega-arrow" aria-hidden="true">›</span></button>
               <button type="button" class="nav__mega-category" data-nav-panel="gov-buildings" role="menuitem">Government-Owned Buildings <span class="nav__mega-arrow" aria-hidden="true">›</span></button>
               <button type="button" class="nav__mega-category" data-nav-panel="municipal" role="menuitem">Municipal &amp; Healthcare <span class="nav__mega-arrow" aria-hidden="true">›</span></button>
               <button type="button" class="nav__mega-category" data-nav-panel="gov-housing" role="menuitem">Government Housing <span class="nav__mega-arrow" aria-hidden="true">›</span></button>
@@ -30,29 +49,8 @@
             </div>
           </div>
         </li>
-
-        <li class="nav__item" role="none" aria-expanded="false" aria-haspopup="true" aria-controls="nav-dropdown-approach">
-          <a href="approach.html" class="nav__link" role="menuitem" id="nav-trigger-approach" aria-controls="nav-dropdown-approach" aria-expanded="false">
-            Approach &amp; Expertise <span class="nav__chevron" aria-hidden="true">▼</span>
-          </a>
-          <div class="nav__dropdown" id="nav-dropdown-approach" role="menu" aria-label="Approach & Expertise" hidden>
-            <div class="nav__dropdown-list">
-              <a href="index.html#approach">Self Perform</a>
-              <a href="index.html#approach">Construction Manager At Risk</a>
-              <a href="index.html#approach">Design Build</a>
-              <a href="index.html#approach">Subcontracting</a>
-              <a href="index.html#approach">Project Management</a>
-              <a href="index.html#approach">Construction Management</a>
-              <a href="index.html#approach">Preconstruction</a>
-            </div>
-          </div>
-        </li>
-
         <li class="nav__item" role="none">
-          <a href="companyInfo.html" class="nav__link" role="menuitem">Company info</a>
-        </li>
-        <li class="nav__item" role="none">
-          <a href="contactUs.html" class="nav__link" role="menuitem">Contact us</a>
+          <a href="contactUs.html" class="nav__link" role="menuitem">Contact Us</a>
         </li>
       </ul>
     </div>

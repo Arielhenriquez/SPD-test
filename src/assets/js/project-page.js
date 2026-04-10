@@ -40,17 +40,17 @@
     }
 
     var overviewEl = document.getElementById("project-overview");
-    if (overviewEl && project.description1 != null) {
+    if (overviewEl) {
       var grid = overviewEl.querySelector(".project-overview__grid");
       if (grid) {
         grid.innerHTML =
           '<div class="project-overview__card">' +
           "<h3>Overview</h3>" +
-          "<p>" + escapeHtml(project.description1) + "</p>" +
+          "<p>" + escapeHtml(project.overview || project.excerpt || "") + "</p>" +
           "</div>" +
           '<div class="project-overview__card">' +
-          "<h3>Scope &amp; Delivery</h3>" +
-          "<p>" + escapeHtml(project.description2 || project.description1) + "</p>" +
+          "<h3>Scope</h3>" +
+          "<p>" + escapeHtml(project.scope || project.overview || "") + "</p>" +
           "</div>";
       }
     }
@@ -70,28 +70,8 @@
     }
 
     var relatedTrack = document.getElementById("project-related-track");
-    if (relatedTrack && window.projectsData && window.getRelatedProjects) {
-      var related = window.getRelatedProjects(slug);
-      var base = window.projectPageBase || "";
-      var relatedHtml = "";
-      related.forEach(function (p) {
-        var excerpt = p.excerpt ? (p.excerpt.length > 120 ? p.excerpt.slice(0, 117) + "..." : p.excerpt) : "";
-        var href = base + p.slug + ".html";
-        relatedHtml +=
-          '<div class="c-carousel__slide">' +
-          '  <article class="related-card">' +
-          '    <div class="thumb">' +
-          '      <a href="' + href + '"><img src="' + escapeHtml(p.image) + '" alt="' + escapeHtml(p.title) + '"/></a>' +
-          "    </div>" +
-          '    <div class="body">' +
-          '      <h3><a href="' + href + '">' + escapeHtml(p.title) + "</a></h3>" +
-          "      <p>" + escapeHtml(excerpt) + "</p>" +
-          '      <a href="' + href + '" class="link">Read more →</a>' +
-          "    </div>" +
-          "  </article>" +
-          "</div>";
-      });
-      relatedTrack.innerHTML = relatedHtml;
+    if (relatedTrack && window.renderProjectRelatedCarousel) {
+      window.renderProjectRelatedCarousel(relatedTrack, slug);
     }
 
     /* Título de la pestaña */

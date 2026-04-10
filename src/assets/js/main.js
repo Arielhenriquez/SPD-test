@@ -30,8 +30,11 @@
 
   var pathname = window.location.pathname || "";
   var isProjectPage = pathname.indexOf("/project/") !== -1 || pathname.indexOf("\\project\\") !== -1;
+  var isExpertisePage = pathname.indexOf("/expertise/") !== -1 || pathname.indexOf("\\expertise\\") !== -1;
   if (isProjectPage) {
     window.projectPageBase = "";
+  } else if (isExpertisePage) {
+    window.projectPageBase = "../project/";
   } else {
     window.projectPageBase = "project/";
   }
@@ -50,12 +53,14 @@
         var href = a.getAttribute("href");
         if (href === "index.html") { a.setAttribute("href", prefix + "index.html"); return; }
         if (href === "projects.html") { a.setAttribute("href", prefix + "projects.html"); return; }
+        if (href === "approach.html") { a.setAttribute("href", prefix + "approach.html"); return; }
         if (href === "contactUs.html") { a.setAttribute("href", prefix + "contactUs.html"); return; }
         if (href === "companyInfo.html") { a.setAttribute("href", prefix + "companyInfo.html"); return; }
+        if (href.indexOf("expertise/") === 0) { a.setAttribute("href", prefix + href); return; }
         if (href.indexOf("index.html") === 0) { a.setAttribute("href", prefix + "index.html" + (href.indexOf("#") !== -1 ? href.substring(href.indexOf("#")) : "")); }
       });
     }
-    if (isProjectPage) {
+    if (isProjectPage || isExpertisePage) {
       var header = document.getElementById("site-header");
       var footer = document.getElementById("site-footer");
       fixLinksForSubfolder(header, "../");
